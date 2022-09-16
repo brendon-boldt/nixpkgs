@@ -1,6 +1,7 @@
 { lib
 , buildPythonPackage
 , fetchPypi
+, jupyter-packaging
 , notebook
 , ipywidgets
 }:
@@ -20,6 +21,10 @@ buildPythonPackage rec {
   postPatch = ''
     substituteInPlace setup.py --replace "'notebook>=4.4.1'," ""
   '';
+
+  nativeBuildInputs = [
+    jupyter-packaging
+  ];
 
   propagatedBuildInputs = [ ];
 
