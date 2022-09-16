@@ -32,8 +32,8 @@ buildPythonPackage rec {
     pytestCheckHook
   ];
 
-  pytestFlagsArray = [
-    "-k 'not dumps and not time'"
+  disabledTests = [
+    "time"
   ];
 
   disabledTestPaths = [
