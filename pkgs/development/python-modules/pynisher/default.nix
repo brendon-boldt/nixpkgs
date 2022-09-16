@@ -1,9 +1,9 @@
 { lib
 , buildPythonPackage
-, docutils
 , fetchPypi
 , psutil
 , pythonOlder
+, typing-extensions
 }:
 
 buildPythonPackage rec {
@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [
     psutil
-    docutils
+    typing-extensions
   ];
 
   # No tests in the Pypi archive
