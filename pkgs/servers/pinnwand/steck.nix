@@ -14,7 +14,6 @@ python3Packages.buildPythonApplication rec {
   };
 
   postPatch = ''
-    cat setup.py
     substituteInPlace setup.py \
       --replace 'click>=7.0,<8.0' 'click' \
       --replace 'termcolor>=1.1.0,<2.0.0' 'termcolor'
