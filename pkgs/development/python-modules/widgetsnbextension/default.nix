@@ -26,8 +26,6 @@ buildPythonPackage rec {
     jupyter-packaging
   ];
 
-  propagatedBuildInputs = [ ];
-
   # No tests in archive
   doCheck = false;
 
